@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Family Details</title>
+</head>
+<body>
+<h1 th:text="${family.name}"></h1>
+<h2>Members</h2>
+<ul>
+    <li th:each="member : ${family.members}" th:text="${member}">Member Name</li>
+</ul>
+</body>
+</html>

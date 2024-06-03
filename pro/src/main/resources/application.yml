@@ -1,0 +1,15 @@
+server:
+  port: 8100
+  error:
+    include-message: always
+
+spring:
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/mydatabase
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration

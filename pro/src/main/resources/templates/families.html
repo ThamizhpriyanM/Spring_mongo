@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Families</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+<h1>Families</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Family Name</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="family : ${families}">
+        <td><a th:href="@{'/families/' + ${family.id}}" th:text="${family.name}">Family Name</a></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
